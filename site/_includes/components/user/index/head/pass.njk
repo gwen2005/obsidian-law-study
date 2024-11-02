@@ -1,0 +1,47 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>yanziyu.site</title>  
+  <style>  
+    /* 添加一个全屏且禁用的样式 */  
+    body.fullscreen-disabled {  
+      margin: 0;  
+      padding: 0;  
+      height: 100vh;  
+      width: 100vw;  
+      overflow: hidden; /* 防止滚动 */  
+      position: fixed; /* 固定定位 */  
+      top: 0;  
+      left: 0;  
+      background-color: #fff; /* 背景色，可根据需要调整 */  
+      pointer-events: none; /* 禁用交互 */  
+      opacity: 1; /* 可根据需要调整透明度 */  
+      display: flex;  
+      align-items: center;  
+      justify-content: center;  
+      color: rgba(0, 0, 0, 0.7); /* 文字颜色，可根据需要调整 */  
+      font-family: Arial, sans-serif;  
+    }  
+  
+    /* 错误页面的内容样式 */  
+    .error-page {  
+      text-align: center;  
+      padding: 20px;  
+      box-sizing: border-box;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <script type="text/javascript">  
+    var password = prompt("请输入密码:");  
+    if (password !== "11") {  
+      // 密码错误时跳转到错误页面，并附带一个参数表示需要禁用交互  
+      window.location.href = "https://yanziyu.site/%E8%BF%90%E8%A1%8C%E6%9D%82/%E4%B8%BB%E9%A1%B5home/%E5%AF%86%E7%A0%81%E9%94%99%E8%AF%AF%E5%95%A6%E2%9D%8C/?disabled=true";  
+    } else {  
+      // 密码正确时不做任何动作  
+    }  
+  </script>  
+</body>  
+</html>
